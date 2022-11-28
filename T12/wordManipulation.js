@@ -1,9 +1,56 @@
 let wordInput = prompt("please enter a word: ");
 
-console.log(wordInput.replace(wordInput.charAt(1), '!'));  //second character replaced with "!"
+console.log(replaceEverySecond(wordInput));  //second character replaced with "!"
 console.log(reverseWord(wordInput));  
-console.log(wordInput.replace(wordInput.charAt(5), wordInput.charAt(5).toUpperCase()));  //6th character uppercase
+console.log(everySixth(wordInput));  //6th character uppercase //6th character uppercase
 console.log(asciiConvert(wordInput));  //array of ascii values of each letter in the word
+
+
+
+
+function everySixth(word){
+    
+    let characters=word.split('');
+    let newWord=[];
+    let newString="";
+
+    for(let i=1; i<characters.length; i++){
+        if(i%6==0){
+            newWord.push(characters[i-1].toUpperCase());
+        }
+        else{
+            newWord.push(characters[i-1]);  
+        }
+    }
+
+    newString=newWord.join('');
+
+    return newString;
+}
+
+
+
+function replaceEverySecond(word){
+
+    let characters=word.split('');
+    let newWord=[];
+    let newString="";
+
+    for(let i=0; i<characters.length; i++)
+    {
+        if(i%2==0){
+            newWord.push(characters[i]);
+        }
+        else{
+            newWord.push('!');
+        }
+    }
+
+    newString=newWord.join('');
+
+    return newString; 
+}
+
 
 function reverseWord(word){
     var reversedWord=word.split("")
