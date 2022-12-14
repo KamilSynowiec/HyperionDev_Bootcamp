@@ -1,0 +1,49 @@
+body{
+    background-color: blue;
+    color: white;     /*text colour*/
+    padding: 100px;       /*padding*/
+}
+
+div{
+    text-align:center;   /*image align*/
+}
+
+img{
+    width:25vw;
+    height:35vw;
+}
+
+#nav{
+    background-color: yellow;
+    text-align: center;
+}
+
+h1,h2,h3{
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.quotes{
+    text-align: right;
+    list-style: none;  /* this is used to remove the points from the list*/
+}
+
+#about{
+    text-align: right;
+}
+
+#box{ /*timeline*/
+    border-style: solid;      /*border properties*/
+    border-color: white;
+    border-radius: 1cm;
+    text-align: left;
+    padding-left: 1cm;      /*padding*/
+}
+
+h3{
+    text-align: left;
+}
