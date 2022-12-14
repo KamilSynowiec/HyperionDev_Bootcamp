@@ -1,0 +1,95 @@
+body{
+    background-color: orange;
+    color: white;     /*text colour*/
+    padding: 100px;       /*padding*/
+}
+
+div{
+    text-align:center;   /*image align*/
+    border-radius: 5px;     /* rounded corners of divs*/
+}
+
+#para1{
+    color: navy;
+}
+
+#para2{
+    border-style: dotted dashed solid double;
+    border-width: 5px;
+    border-color: springgreen;
+}
+
+.class1{
+    font-size:25px;
+    line-height: 20px;
+    color:plum;
+    font-family:monospace;
+    padding:4px;
+    margin-left:6px;
+
+}
+
+img{
+    width:25vw;
+    height:35vw;
+    border:10px solid blue;
+}
+
+#caption1{
+    text-align:center;   /*caption text*/
+    font-size:20px;
+    font-weight: bold; 
+}
+
+#nav{
+    background-color: yellow;
+    text-align: center;
+}
+
+h1,h2,h3{
+    font-style: italic;  /*all h2 tags are italic*/
+    font-family:'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+    padding-left: 20px;    /*padding of the h1 tag*/
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    color: brown;
+}
+
+h3{
+    width: 25%;
+}
+
+.listSet{
+    background-color:cadetblue;  /*highlight 2 sets of list*/
+    width: 300px;
+}
+
+.quotes{
+    text-align: left;
+    list-style: none;  /* this is used to remove the points from the list*/
+}
+
+#about{
+    text-align: right;
+}
+
+#box{ /*timeline*/
+    border-style: solid;      /*border properties*/
+    border-color: white;
+    /*border-radius: 1cm;*/
+    text-align: left;
+    padding-left: 1cm;      /*padding*/
+}
+
+h3{
+    text-align: left;
+}
+
+aside{
+    margin-left: 20px /*indented by 20px*/
+}
