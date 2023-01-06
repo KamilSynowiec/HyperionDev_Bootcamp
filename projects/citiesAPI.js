@@ -1,3 +1,8 @@
+/*This software finds information about Johhanesburg city by using GeoDB Cities and Weather APIs. It makes use of node.js fetch.
+The details of the city that are shown: Population, Elevation and Current temperature */
+
+
+
 //variables used to store position of the city to use for finding out temperature from the second api
 let longitude;
 let latitude;
