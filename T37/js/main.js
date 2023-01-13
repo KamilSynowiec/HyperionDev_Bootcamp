@@ -13,9 +13,14 @@ function displayShopping(groceryItems){
         let newItem=document.createElement("li");   //creating new <li>
         newItem.textContent=item; //changing content of the <li>
 
+        let spanElement=document.createElement("span");
+        
+        spanElement.textContent=' \u00D7';
+        
+        newItem.appendChild(spanElement);
+
         list.appendChild(newItem);   //adding the newly created <li> to the original unordered list <ul>
     });
-
 
     //styling 2 items: Eggs and Bread to indicate they are sold
     let secondSold=document.querySelector("ul > li:nth-child(2)");
