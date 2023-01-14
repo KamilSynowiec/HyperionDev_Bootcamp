@@ -35,12 +35,14 @@ function displayShopping(groceryItems){
     //deleteItem();
 }
 
-
-displayShopping(groceryItems);
-
 function updateList(){
     let input=document.getElementById('input');
-    groceryItems.push(input.value);
+    
+    if(input.value==""){
+        alert("Please insert an item! ");
+    }else{  
+        groceryItems.push(input.value);
+    }
 
-    console.log(groceryItems);
+    displayShopping(groceryItems);
 }
