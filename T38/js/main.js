@@ -16,6 +16,7 @@ function displayShopping(groceryItems){
         let spanElement=document.createElement("span");
         
         spanElement.textContent=' \u00D7';
+        spanElement.className="close";
         
         newItem.appendChild(spanElement);
 
