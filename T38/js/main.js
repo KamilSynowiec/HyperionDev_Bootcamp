@@ -46,3 +46,40 @@ function updateList(){
 
     displayShopping(groceryItems);
 }
+
+function deleteItems(){
+    let closeButtons = document.querySelectorAll(".close");
+    
+    for(let i=0; i<closeButtons.length; i++)
+    {
+
+        closeButtons[i].addEventListener("click", function(e){
+
+            let targetValue=e.target.parentElement.childNodes[0].nodeValue;
+
+            let indexOfItem=groceryItems.indexOf(targetValue);
+            groceryItems.splice(indexOfItem, 1);
+
+            console.log(groceryItems);
+
+            e.target.parentElement.style.display='none';
+        });
+    }
+
+}
+
+
+let itemList=document.getElementById("itemList"); //getting out list
+    itemList.addEventListener("click", function(e){
+        if(e.target.tagName==="LI"){
+            e.target.classList.toggle("checked");
+        }
+    });
+
+let input=document.getElementById("input");
+var addBtn=document.getElementById("addBtn");
+    input.addEventListener("keyup", function(e){
+        if(e.keyCode===13){
+            addBtn.click();
+        }
+    });
