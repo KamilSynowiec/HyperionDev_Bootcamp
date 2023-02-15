@@ -1,0 +1,15 @@
+1. Protocol is a standarized set of rules that needs to be followed to perform particular task. Thanks to this we are consistent and avoid communication problems between different devices
+
+2. HTTP is build on top of TCP/IP protocol
+
+3. If a request is successful, the status code of the response will be 200 OK
+
+4. In HTTP methods that are the CRUD equivalents are: CREATE, READ, UPDATE, DELETE
+
+5. Stateless protocol is a protocol that doesn’t require the receiving server to remember session state, so every time the client communicates with the server it needs to specify request again for example client asking for number from 1 to 10, when making request for next 10 numbers it needs to specify please give me numbers from 11 to 20.
+
+6. Valid MIME types:
+  - image/jpeg
+  - text/javascript
+
+7. If the server doesn’t allow you permission to request a specific resource, you can expect 403 Forbidden code to show. This means the client is known to the server but it doesn’t have right to access the content.
