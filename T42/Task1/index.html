@@ -1,0 +1,65 @@
+<!--This is a responsive website about dumplings. It contains 3 subpages: chinese dumplings, nepalese dumplings and polish dumplings
+The website uses css grid layout-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The land of Dumplings!</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        <div class="container">  <!--this is container where all our elements are-->
+            <div id="main-grid-element1">
+                <h1>The land of Dumplings!</h1>
+            </div>
+
+            <div id="main-grid-element2">
+                <p>I love dumplings! Making dumplings is my passon as well as eating them. Welcome to my website 
+                    where I will share with you different types of dumplings from all over the world!
+                </p>
+            </div>
+
+            <div id="main-grid-element3">
+                <img src="images/dumpling1.png" alt="dumpling photo">
+            </div>
+
+
+
+
+            <!--this is a list of dumplings that allows to click on them to open another page-->
+            <div id="main-grid-item4">
+                <p>Currently you will find dumplings from the following countries on my website but there will be more added in near future!</p>
+                <p>Please press the name of the dumplings you would like to read about: </p>
+                
+                <ul>
+                    <li><a href="polish_dumplings.html">Polish Dumplings</a></li>
+                    <li><a href="nepalese_dumplings.html">Nepalese Dumplings</a></li>
+                    <li><a href="chinese_dumplings.html">Chinese Dumplings</a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a href="saveForLater.html">Access Saved dumplings</a></li>
+                    <li><a href="contactUs.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <!--this is a form that allows user to subscripe to receive new recipes onto email-->
+            <div id="subscriptionTable">
+                <p>If you subscripe, you are going to receive even more new recipes!!!</p>
+                <form>
+                    <a>Please select how often you would like to receive recipes: </a><br>
+                    <label for="weekly">weekly</label>
+                    <input type="radio" id="weekly" name="frequency" value="weekly"><br>
+                    <label for="fortnightly">fortnightly</label>
+                    <input type="radio" id="fortnightly" name="frequency" value="fortnightly"><br>
+                    <label for="monthly">monthly</label>
+                    <input type="radio" id="monthly" name="frequency" value="monthly"><br><br>
+
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" name="email" value="youremail@example.com" class="roundedCorners"><br><br>
+                    <input type="submit" value="Submit" class="roundedCorners">
+                </form>
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
