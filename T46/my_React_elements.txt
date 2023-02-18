@@ -1,0 +1,21 @@
+function updateTime() {
+  const element = (
+    <div>
+      <h1>Today is: {new Date().toLocaleString()}.</h1>
+      <a href="https://github.com/KamilSynowiec">
+        <button>my github</button>
+      </a>
+      <h2>Advantages of JavaScript frameworks/libraries:</h2>
+      <ul>
+        <li>help to save time (no reinvent the wheel)</li>
+        <li>help to develop efficient code</li>
+        <li>allows for quick launch of the project</li>
+      </ul>
+    </div>
+  );
+
+  //method that when called renders new element
+  root.render(<StrictMode>{element}</StrictMode>);
+}
+
+setInterval(updateTime, 1000); //updates time every 1 second
