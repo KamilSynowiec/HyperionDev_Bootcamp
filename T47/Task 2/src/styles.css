@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#name{
+    text-align: center;
+    font-weight: bold;
+}
+
+#title{
+    font-size:18px;
+}
+
+#profilePic{
+    width: 200px;
+    height: 170px;
+    border-radius: 100%;
+    margin: 20px 40px 0px 40px;
+}
+
+#profileCard{
+    margin-left: 20px;
+}
+
+#curriculumVitae{
+    float: right;
+    top: -561px;
+    margin-right: 20px;
+}
