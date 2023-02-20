@@ -1,9 +1,9 @@
-import {Routes, Route, Link} from "react-router-dom";
+import {Routes, Route, Link} from "react-router-dom"; 
 import logo from "./logo.png";  //importing logo 
 import "./styles.css"; //stylesheet
 import React from "react";
 
-
+//page navigation
 function NavItems(){
     return(
         <div>
@@ -57,6 +57,7 @@ class Header extends React.Component {
     }
   }
   
+//landing page displaying what the company does
   function LandingPage() {
     return (
       <div>
@@ -65,7 +66,21 @@ class Header extends React.Component {
       </div>
     );
   }
+
+//shopping component that refers to other product components
+function Shopping(){
+    return(
+        <div>
+            <h2>Shopping</h2>
+            <Product1/>
+            <Product2/>
+            <Product3/>
+        </div>
+    );
+}
   
+
+//product components
   function Product1(props) {
     return (
       <div>
@@ -106,18 +121,9 @@ class Header extends React.Component {
     );
   }
   
-function Shopping(){
-    return(
-        <div>
-            <h2>Shopping</h2>
-            <Product1/>
-            <Product2/>
-            <Product3/>
-        </div>
-    );
-}
 
 
+//element containing information about user that displays on Profile page
 const userInfo=
 <div>
     <ul>
@@ -131,9 +137,9 @@ const userInfo=
 class Profile extends React.Component{
     constructor(props){
         super(props);
-        this.state = {isLoggedIn: true};
+        this.state = {isLoggedIn: true};  
 
-        this.handleClick=this.handleClicking.bind(this);
+        this.handleClick=this.handleClicking.bind(this); //binding handleClicking method to handleClick
     }
 
 
@@ -150,16 +156,17 @@ class Profile extends React.Component{
         return(
             <div>
                 <h2>User Profile:</h2>
-                {this.state.isLoggedIn? userInfo : ""}
-                <button onClick={this.handleClick}>Log out</button>
-                <p>User logged {this.state.isLoggedIn? "in" : "out"}</p>
-                <p>{this.state.isLoggedIn? "" : alert("User has logged out!")}</p>
+                {this.state.isLoggedIn? userInfo : ""}  {/*if user is logged then displays user information element*/}
+                <button onClick={this.handleClick}>Log out</button> 
+                <p>User logged {this.state.isLoggedIn? "in" : "out"}</p>  
+                <p>{this.state.isLoggedIn? "" : alert("User has logged out!")}</p>  {/*Alert informing that user has logged out */}
                 
             </div>
         );
     }
 }
 
+//legal page 
 function Legal(){
     return(
         <div>
@@ -175,6 +182,7 @@ function Legal(){
 }
 
 
+//calculator for interests loan for shopping
 function Calculator(){
     let input=0;
     let months=0;
@@ -185,7 +193,7 @@ function Calculator(){
             <h3>Current interest rate is 20%</h3>
             {input=parseInt(prompt("Enter total shopping value: "))}
             {months=parseInt(prompt("Enter number of months to calculate: "))};
-            <p>"your monthly repayment: "{(input+(input*0.2*months/12))}</p>
+            <p>"your monthly repayment: "{(input+(input*0.2*months/12))}</p>  {/*assumes 20% interest rate */}
         </div>
     );
 }
