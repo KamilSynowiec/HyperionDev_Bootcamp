@@ -1,0 +1,110 @@
+#left-nav{
+    text-align:left;
+    margin: 20px;
+}
+
+#right-nav{
+    text-align: right;
+    margin-top: -40px;
+    margin-right: 20px;
+
+}
+
+.nav-elements{   
+    padding:10px;
+    text-decoration: none;
+    color: black;
+    font-size:14px;
+}
+
+#nineDots{   /*nine dots icon*/
+    height: 30px;
+}
+
+#sign-in{   /*sign in button*/
+    background-color:rgb(14, 128, 241);
+    border-radius: 5px;
+    border:none;
+    width:96px;
+    height: 36px;
+    color:white;
+}
+
+#footer{
+    background-color: rgb(244, 240, 240);
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    color:gray;
+    font-size: 14px;
+    border-radius: 10px;   /*rounded corners*/
+}
+
+#new-line{    /*gray line under the country part of the footer*/
+    background-color: rgb(187, 187, 187);
+    white-space: pre-line;
+    width:100%;
+    height:0.5px;
+
+}
+
+#carbon-text{
+    text-align: center;
+    position:relative;
+    margin-bottom:-10px;
+    margin-top:10px;
+}
+
+#left-footer{
+    text-align:left;
+    margin-left: 0px;
+
+}
+
+#right-footer{
+    text-align:right;
+    margin-right: 0px;
+    margin-top:-20px;
+
+}
+
+.footer-elements{
+  padding:10px;
+}
+
+#country{    
+    padding-left:10px;
+}
+
+#main{  /*main component*/
+    text-align:center;
+    margin-top:35px;
+}
+
+#googleLogo{   /*google logo imported*/
+    width: 300px;
+    height: 100px;
+}
+
+#inputField{
+    border-radius: 25px;
+    width: 580px;
+    height:45px;
+    border-color:rgb(222, 221, 221);
+    border-style:solid;  
+    margin:20px;
+    background: url(./search.png) no-repeat scroll 10px 12px;  /*personal use https://www.freeiconspng.com/img/9982*/
+    padding-left:30px;
+}
+
+.buttons{ /*buttons below input field*/
+    border-radius: 5px;
+    background-color:rgb(243, 243, 243);
+    color:black;
+    border:none;
+    margin:10px;
+    width:127px;
+    height:36px;
+    font-size:13px;
+}
