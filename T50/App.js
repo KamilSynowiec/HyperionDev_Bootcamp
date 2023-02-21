@@ -1,7 +1,7 @@
 import {Routes, Route, Link} from "react-router-dom"; 
 import logo from "./logo.png";  //importing logo 
 import "./styles.css"; //stylesheet
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 //page navigation
 function NavItems(){
@@ -16,33 +16,24 @@ function NavItems(){
             </nav>
         </div>
     )
-}
+} 
 
-
-//Header component that uses state to check if user is logged in
-class Header extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { isLoggedIn: false };
-    }
+//Header component that uses hooks to check if user is logged in
+function Header(props){
+    const [isLoggedIn, setLogged] = useState(false);    //this method is setting isLoggedIn state 
+   
+    
+    //this runs when the function is triggered
+    useEffect(()=>{
+      setLogged(props.isLoggedIn);
+    }, [props.isLoggedIn]);
   
-    //this method is setting isLoggedIn state 
-    userLogging() {
-      this.setState({ isLoggedIn: this.props.isLoggedIn });
-    }
-  
-    //this method runs when the component is mounted
-    componentDidMount() {
-      this.userLogging();
-    }
-  
-    render() {
-      if (this.state.isLoggedIn === true) {  //if user is logged in the app will display Welcome + name of the user
+      if (isLoggedIn===true) {  //if user is logged in the app will display Welcome + name of the user
         return (
           <div>
             <img src={logo} alt="Logo" />
             <h1>The fictitious cloth store</h1>
-            <p class="welcome">Welcome {this.props.name}</p>
+            <p class="welcome">Welcome {props.name}</p>
           </div>
         );
       } else {  //if the user is not logged in the app will ask user to sign up
@@ -50,12 +41,11 @@ class Header extends React.Component {
           <div>
             <img src={logo} alt="Logo" />
             <h1>The fictitious cloth store</h1>
-            <p class="welcome">Please sign in first{this.state.isLoggedIn}</p>
+            <p class="welcome">Please sign in first{isLoggedIn}</p>
           </div>
         );
       }
     }
-  }
   
 //landing page displaying what the company does
   function LandingPage() {
@@ -134,36 +124,26 @@ const userInfo=
 </div>;
 
 
-class Profile extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {isLoggedIn: true};  
-
-        this.handleClick=this.handleClicking.bind(this); //binding handleClicking method to handleClick
-    }
-
-
-
-    handleClicking(){
-        this.setState(
-            prevState=>({
-                isLoggedIn: !prevState.isLoggedIn
-            })
-        );
-    }
-
-    render(){
-        return(
-            <div>
-                <h2>User Profile:</h2>
-                {this.state.isLoggedIn? userInfo : ""}  {/*if user is logged then displays user information element*/}
-                <button onClick={this.handleClick}>Log out</button> 
-                <p>User logged {this.state.isLoggedIn? "in" : "out"}</p>  
-                <p>{this.state.isLoggedIn? "" : alert("User has logged out!")}</p>  {/*Alert informing that user has logged out */}
+function Profile(){
+    const [isLoggedIn, setLogged] = useState(true);    //this method is setting isLoggedIn state 
+    
+        //this.handleClick=this.handleClicking.bind(this); //binding handleClicking method to handleClick
+      return(
+          <div>
+              <h2>User Profile:</h2>
+              {isLoggedIn? userInfo : ""} 
+              <button onClick={()=>{
+                if(isLoggedIn===true){  //checking id user is logged then change state addequately
+                  setLogged(false);
+                }else{
+                  setLogged(true);
+                }
+              }}>Log out</button> 
+              <p>User logged {isLoggedIn? "in" : "out"}</p>  
+              <p>{isLoggedIn? "" : alert("User has logged out!")}</p>  {/*Alert informing that user has logged out */}
                 
-            </div>
-        );
-    }
+          </div>
+      );
 }
 
 //legal page 
@@ -204,7 +184,7 @@ function Calculator(){
     return (
       <div className="App">
         <NavItems/>
-        <Header name="Michael" isLoggedIn={true} />
+        <Header isLoggedIn={true} name="Michael"/>
         <Routes>
             <Route exact path="/" element={<LandingPage/>}/>
             <Route path="/profile" element={<Profile/>}/>
